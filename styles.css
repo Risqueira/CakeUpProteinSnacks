@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+}
+
+header {
+    width: 100%;
+    /*width: 100vw; – Use width: 100% no header, nav e outros elementos grandes para evitar que eles ultrapassem os limites da tela.*/
+    height: 200px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 5%;
+    background-color: #F0CEA0;
+    position: relative;
+    z-index: 2;
+}
+
+.logo img {
+    height: 200px;
+    width: auto;
+}
+
+/*configuraçao das navegaçoes do header*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+
+nav ul {
+    list-style-type: none;
+    /*remove a numeração*/
+    display: flex;
+    /*transforma o conteudo dentro do header em um flex container*/
+    gap: 16px;
+    /*definir o espaçamento entre os itens filhos de um container que usa display: flex*/
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    border: 20px;
+    font-size: 30px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+
+/*configuração do main*/
+main {
+    padding: 16px 5%;
+}
+
+/*configuração do section banner (foto abaixo do header)*/
+#banner {
+    position: relative;
+    background-image: url("/src/unnamed.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 50vw;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/*configuraçoes geral das sections e elementos*/
+section {
+    margin: 50px;
+    padding: 20px;
+}
+
+section p {
+    text-align: justify;
+    color: black;
+    font-size: 18pt;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+section h2 {
+    padding: 20px;
+    color: black;
+    background-color: #F0CEA0;
+    text-align: center;
+
+}
+
+#CakeUp {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto 30px;
+}
+
+#CakeUp h2 {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* mantém centralizado */
+    gap: 60px;
+    /* distância entre os cards */
+    margin-top: 40px;
+    /* afasta da parte de cima */
+}
+
+.card {
+    width: 500px;
+    /* aumenta o tamanho do card */
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 20pt;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.container :hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+
+/* Área total do formulário */
+#Formulario {
+    background-color: #594e4a;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container do formulário + redes sociais */
+.container-form {
+    display: flex;
+    flex-direction: row;
+    /* lado a lado */
+    gap: 60px;
+    /* espaço entre formulário e redes */
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Caixa do formulário */
+.form-box {
+    flex: 2;
+    /* maior espaço */
+    background: #493f3c;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-box h2 {
+    color: white;
+    background-color: #F0CEA0;
+}
+
+.form-box label {
+    color: white;
+    font-size: 18px;
+}
+
+/* Título do formulário */
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Formulário dentro */
+.form-box form {
+    width: 100%;
+}
+
+/* Inputs */
+#Formulario input[type="text"],
+#Formulario input[type="tel"],
+#Formulario textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Botões */
+#Formulario input[type="submit"],
+#Formulario input[type="reset"] {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Caixa das redes sociais */
+.social-box {
+    flex: 1;
+    /* menor espaço */
+}
+
+/* Título redes sociais */
+.social-box h3 {
+    margin-bottom: 20px;
+    font-size: 20pt;
+    color: white;
+}
+
+/* Ícones */
+.icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/*configuraçao do footer*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F0CEA0;
+    padding: 19px 5%;
+    width: 100%;
+    height: auto;
+}
+
+footer p {
+    color: black;
+    font-size: 16pt;
+}
+
+/*configuraçao para telefone*/
+@media screen and (max-width: 768px),
+(max-device-width: 768px) {
+
+    /*aplica para todos elementos da pagina*/
+    * {
+        box-sizing: border-box;
+    }
+
+    /*impede de rolar a tela para o lado*/
+    html,
+    body {
+        overflow-x: hidden;
+        /* Isso impede o scroll lateral */
+        width: 100%;
+    }
+
+    /*aplicação para todo body, remove espaço padrao do navegador*/
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 16px 16px;
+        z-index: 2;
+        box-sizing: border-box;
+    }
+
+    .logo img {
+        height: 200px;
+        width: auto;
+    }
+
+    /*configuraçao das navegaçoes do header*/
+    nav {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    nav ul {
+       list-style: none;
+        display: flex;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+        padding: 15px;
+        border: 20px;
+        font-size: 30px;
+    }
+
+    nav a:hover {
+        text-decoration: none;
+        padding: 15px;
+        color: white;
+    }
+
+    /*configuração do main*/
+    main {
+        padding: 16px 5%;
+    }
+
+    /*configuração do section banner (foto abaixo do header)*/
+    #banner {
+        position: relative;
+        background-image: url("/src/unnamed.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 50vh;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    /*configuraçoes geral das sections e elementos*/
+    section {
+        margin: 50px;
+        padding: 20px;
+    }
+
+    section p {
+        text-align: justify;
+        color: black;
+        font-size: 18pt;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    section h2 {
+        padding: 20px;
+        color: black;
+        background-color: #F0CEA0;
+        text-align: center;
+
+    }
+
+    #CakeUp {
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        margin: 0 auto 30px;
+    }
+
+    #CakeUp h2 {
+        padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        /* afasta da parte de cima */
+        flex-direction: column;
+    }
+
+    .card {
+        width: 250px;
+        /* aumenta o tamanho do card */
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .card h3 {
+        text-align: center;
+        padding: 10px;
+        font-size: 20pt;
+    }
+
+    .card p {
+        padding: 0 15px 15px;
+        font-size: 16pt;
+        text-align: center;
+    }
+
+    .container :hover {
+        transform: scale(1.05);
+        transition: transform 0.3s;
+    }
+
+
+    /* Área total do formulário */
+    #Formulario {
+        background-color: #594e4a;
+        padding: 90px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Container do formulário + redes sociais */
+    .container-form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px; /* espaço entre formulário e redes */
+        width: 300px;
+        padding: 10px;
+    }
+
+    /* Caixa do formulário */
+    .form-box {
+        background: #493f3c;
+        padding: 10px;
+        /* aumenta o espaço ao redor */
+        border-radius: 15px;
+    }
+
+    .form-box h2 {
+        color: white;
+        background-color: #F0CEA0;
+    }
+
+    .form-box label {
+        color: white;
+        font-size: 18px;
+    }
+
+    /* Título do formulário */
+    .form-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Formulário dentro */
+    .form-box form {
+        width: 100%;
+    }
+
+    /* Inputs */
+    #Formulario input[type="text"],
+    #Formulario input[type="tel"],
+    #Formulario textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        margin-top: 8px;
+        margin-bottom: 18px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    /* Botões */
+    #Formulario input[type="submit"],
+    #Formulario input[type="reset"] {
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: none;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Caixa das redes sociais */
+    .social-box {
+        flex: 1;
+        /* menor espaço */
+    }
+
+    /* Título redes sociais */
+    .social-box h3 {
+        margin-bottom: 20px;
+        font-size: 20pt;
+        color: white;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Ícones */
+    .icon img {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-left: 90px;
+    }
+
+
+    /*configuraçao do footer*/
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F0CEA0;
+        padding: 19px 5%;
+        width: 100%;
+        height: auto;
+    }
+
+    footer p {
+        color: black;
+        font-size: 16pt;
+    }
+
+}
