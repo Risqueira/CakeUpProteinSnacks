@@ -345,12 +345,12 @@ footer p {
     /*configuração do section banner (foto abaixo do header)*/
     #banner {
         position: relative;
-        background-image: url("./src/unnamed.jpg");
+        background-image: url("src/unnamed.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        height: 40vh;
         width: 100%;
-        height: 50vh;
         padding: 20px;
         margin: 0 auto;
     }
